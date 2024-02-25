@@ -1,7 +1,4 @@
 import logging
-
-import customtkinter as ctk
-
 import settings
 from frames.app import app
 

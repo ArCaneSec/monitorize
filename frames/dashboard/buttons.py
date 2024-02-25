@@ -3,12 +3,14 @@ from typing import Union
 
 import customtkinter as ctk
 
+from bases.button import Button
+
 
 @dataclass
-class RedButton(ctk.CTkButton):
+class RedButton(Button):
     master: Union[ctk.CTk, ctk.CTkFrame]
-    width: int = 140
-    height: int = 28
+    width: int = 555
+    height: int = 555
 
     def __post_init__(self):
         super().__init__(
@@ -18,3 +20,6 @@ class RedButton(ctk.CTkButton):
             text="red button",
             fg_color="red",
         )
+
+
+exported_buttons: dict[str, Button] = {RedButton.__name__: RedButton}
